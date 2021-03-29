@@ -7,13 +7,15 @@ body {
   font-family: 'Lato', sans-serif;
   background: linear-gradient(to top, #dbdbd2 75%, #009688 74%);
   height: 100vh;
+  padding: 10px 0;
+  overflow: hidden;
 }
 .app-wrapper {
-  margin: 0 250px;
-  /* altezza da checckare */
-  min-height: 98%;
-  /* width: 80%; */
+  margin: auto;
+  height: calc(100vh - 20px);
   background-color: #ffffff;
+  overflow: auto;
+  width: 70%;
 }
 #search {
   height: 30px;
@@ -113,11 +115,13 @@ header {
 
 /* main */
 main {
+  display: flex;
+  height: calc(100% - 60px);
 }
 /* main-left */
 .main-left {
   width: 30%;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
 }
 .notification {
@@ -127,7 +131,7 @@ main {
   align-items: center;
 }
 .search {
- background-color: #fafafa;
+  background-color: #fafafa;
 }
 .search {
   height: 40px;
@@ -139,8 +143,8 @@ main {
   font-size: 14px;
 }
 .contacts {
-  height: 580px;
-  overflow-y: scroll;
+  height: 500px;
+  overflow-y: auto;
 }
 .user {
   height: 75px;
@@ -166,10 +170,22 @@ main {
 
 /* main-right */
 .main-right {
+  height: 100%;
   width: 70%;
+  display: inline-block;
+  background-image: url(../img/mine.jpg);
+
 }
-
-
+.msg-wrap {
+  padding: 50px;
+  height: calc(100% - 70px);
+  width: 100%;
+  display: flex;
+}
+.main-right-footer {
+  height: 70px;
+  background-color: red;
+}
 
 
 
