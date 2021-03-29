@@ -9,9 +9,9 @@ body {
   height: 100vh;
 }
 .app-wrapper {
-  margin: 20px 250px;
+  margin: 0 250px;
   /* altezza da checckare */
-  height: 850px;
+  min-height: 98%;
   /* width: 80%; */
   background-color: #ffffff;
 }
@@ -140,6 +140,7 @@ main {
 }
 .contacts {
   height: 580px;
+  overflow-y: scroll;
 }
 .user {
   height: 75px;
