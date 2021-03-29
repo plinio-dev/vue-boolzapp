@@ -14,20 +14,16 @@ body {
   /* width: 80%; */
   background-color: #ffffff;
 }
-header {
-  height: 60px;
-  background-color: #eaeaea;
-  display: flex;
-  align-items: center;
-}
+/* general */
 
-.head-left {
-  padding: 0 10px;
-  width: 30%;
-  display: flex;
-  align-items: center;
+p {
+  font-size: 12px;
+  color: #b1b1b1;
 }
-.user-img {
+.fas {
+  color: #b1b1b1;
+}
+.circle {
   height: 45px;
   width: 45px;
   background-color: #bbb;
@@ -35,11 +31,46 @@ header {
   display: inline-block;
   overflow: hidden;
 }
-.head-left .user-img img {
-  width: 100%;
+.vl {
+  border-left: 1px solid #dedede;
+  height: 60px;
+}
+/* general */
+
+/* header */
+header {
+  height: 60px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+}
+/* left */
+.head-left {
+  padding: 0 10px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-img {
+ display: flex;
+ align-items: center;
 }
 
-
+.icons i {
+  padding-left: 10px;
+}
+/* right */
 .head-right {
   width: 70%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+.info {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+/* header */
