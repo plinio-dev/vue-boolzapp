@@ -5,4 +5,41 @@
 }
 body {
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(to top, #dbdbd2 75%, #009688 74%);
+  height: 100vh;
+}
+.app-wrapper {
+  margin: 20px 250px;
+  height: 850px;
+  /* width: 80%; */
+  background-color: #ffffff;
+}
+header {
+  height: 60px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+}
+
+.head-left {
+  padding: 0 10px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.user-img {
+  height: 45px;
+  width: 45px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+}
+.head-left .user-img img {
+  width: 100%;
+}
+
+
+.head-right {
+  width: 70%;
 }
