@@ -61,16 +61,25 @@
           </div>
           <div class="contacts">
             <ul>
-              <li class="user" v-for="contact in contacts"><img class="circle circle-user" :src="'img/avatar' + contact.avatar + '.jpg'"><div class="name"><h5>{{contact.name}}</h5></div></li>
+              <li class="user" v-for="(contact, index) in contacts" @click="selectContact(index)">
+                <img class="circle circle-user" :src="'img/avatar' + contact.avatar + '.jpg'">
+                <div class="name">
+                  <h5>{{contact.name}} {{index}}</h5>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
         <div class="main-right">
           <div class="msg-wrap">
             <div class="send">
-              <div class="chat"><p>Hai portato a spasso il cane? Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p class="date_send">29/03/2021 20.01</p></div>
+              <div class="chat "><p>Hai portato a spasso il cane?</p> <p class="date_send">29/03/2021 20.01</p></div>
+              <div class="chat "><p>Ricordati di dargli da mangiare</p> <p class="date_send">29/03/2021 20.01</p></div>
             </div>
-            <div class="received chat"><p>Tutto fatto! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p class="date_send">29/03/2021 20.01</p></div>
+            <div class="received">
+              <div class="chat cl-white"><p>Tutto fatto!</p> <p class="date_send">29/03/2021 20.01</p></div>
+              <div class="chat  cl-white"><p>Tutto fatto!</p> <p class="date_send">29/03/2021 20.01</p></div>
+            </div>
           </div>
           <div class="main-right-footer">
             <div class="write">
