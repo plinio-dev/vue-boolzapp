@@ -15,7 +15,7 @@
   <title>Boolzap</title>
 </head>
 <body>
-  <div class="app-wrapper">
+  <div id="app">
     <header>
       <div class="head-left">
         <div class="user-img">
@@ -59,35 +59,8 @@
         </div>
         <div class="contacts">
           <ul>
-            <li class="user"><img class="circle circle-user " src="img/avatar_1.jpg" alt="">
-            <div class="name">
-              <h5>Michele</h5>
-            </div></li>
+            <li class="user" v-for="contact in contacts"><img class="circle circle-user" :src="'img/avatar' + contact.avatar + '.jpg'"><div class="name"><h5>{{contact.name}}</h5></div></li>
           </ul>
-          <!-- <div class="user">
-            <img class="circle circle-user " src="img/avatar_1.jpg" alt="">
-            <div class="name">
-              <h5>Michele</h5>
-            </div>
-          </div>
-          <div class="user">
-            <img class="circle circle-user " src="img/avatar_2.jpg" alt="">
-            <div class="name">
-              <h5>Fabio</h5>
-            </div>
-          </div>
-          <div class="user">
-            <img class="circle circle-user " src="img/avatar_3.jpg" alt="">
-            <div class="name">
-              <h5>Samuele</h5>
-            </div>
-          </div>
-          <div class="user">
-            <img class="circle circle-user " src="img/avatar_4.jpg" alt="">
-            <div class="name">
-              <h5>Luisa</h5>
-            </div>
-          </div> -->
         </div>
       </div>
       <div class="main-right">

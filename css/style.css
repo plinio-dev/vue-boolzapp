@@ -8,7 +8,7 @@ body {
   background: linear-gradient(to top, #dbdbd2 75%, #009688 74%);
   overflow: hidden;
 }
-.app-wrapper {
+#app {
   margin: 10px auto;
   height: 100vh;
   background-color: #ffffff;
