@@ -5,15 +5,21 @@
 }
 body {
   font-family: 'Lato', sans-serif;
-  background: linear-gradient(to top, #dbdbd2 75%, #009688 74%);
-  overflow: hidden;
 }
 #app {
-  margin: 10px auto;
+  position: relative;
   height: 100vh;
+  background: linear-gradient(to top, #dbdbd2 75%, #009688 74%);
+}
+.wrapper {
+
+  height: 95%;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
-  overflow: auto;
-  width: 70%;
 }
 #search {
   height: 30px;
@@ -78,7 +84,7 @@ a:hover, i:hover {
 
 /* header */
 header {
-  height: 60px;
+  height: 70px;
   background-color: #eaeaea;
   display: flex;
   align-items: center;
@@ -143,7 +149,7 @@ main {
   font-size: 14px;
 }
 .contacts {
-  height: calc(100% - 25px);
+  height: calc(100% - 35px);
   overflow-y: scroll;
 
 }
