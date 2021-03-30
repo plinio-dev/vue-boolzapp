@@ -32,10 +32,10 @@
         </div>
         <div class="vl"></div>
         <div class="head-right">
-          <div class="user-img">
-            <img class="circle " :src="'img/avatar' + contact[index].avatar + '.jpg'" alt="">
+          <div class="user-img" >
+            <img class="circle " :src="'img/avatar' + contacts[elementIndex].avatar + '.jpg'" alt="">
             <div class="info">
-              <h5>{{contact.name}}</h5>
+              <h5>{{contacts[elementIndex].name}}</h5>
               <p>Ultimo accesso oggi alle </p>
             </div>
           </div>
@@ -61,10 +61,10 @@
           </div>
           <div class="contacts">
             <ul>
-              <li class="user" v-for="(contact, index) in contacts" @click="selectContact(index)" :class="contactIndex == index ? 'active' : '' ">
-                <img class="circle circle-user" :src="'img/avatar' + contact.avatar + '.jpg'">
+              <li class="user" v-for="(elements, index) in contacts" @click="selectContact(index)" :class="elementIndex == index ? 'active' : '' ">
+                <img class="circle circle-user" :src="'img/avatar' + elements.avatar + '.jpg'">
                 <div class="name">
-                  <h5>{{contact.name}} {{index}}</h5>
+                  <h5>{{elements.name}} {{index}}</h5>
                 </div>
               </li>
             </ul>
@@ -72,11 +72,12 @@
         </div>
         <div class="main-right">
           <div class="msg-wrap">
-            <div class="send">
-              <div class="chat "><p>Hai portato a spasso il cane?</p> <p class="date_send">29/03/2021 20.01</p></div>
-              <div class="chat "><p>Ricordati di dargli da mangiare</p> <p class="date_send">29/03/2021 20.01</p></div>
+            <div v-for="elements in contacts[elementIndex].messages" >
+              <div class="chat "><p>{{contacts.message}}</p> <p class="date_send">29/03/2021 20.01</p></div>
+              <!-- <div class="chat "><p>Ricordati di dargli da mangiare</p> <p class="date_send">29/03/2021 20.01</p></div>
+              <div class="chat "><p>Ciao come stai?</p> <p class="date_send">29/03/2021 20.01</p></div> -->
             </div>
-            <div class="received">
+            <div >
               <div class="chat cl-white"><p>Tutto fatto!</p> <p class="date_send">29/03/2021 20.01</p></div>
             </div>
           </div>

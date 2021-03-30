@@ -106,12 +106,15 @@ var app = new Vue ({
             ],
           },
         ],
-      contactIndex: 0
+      elementIndex: 0
     },
     methods: {
       selectContact: function(i) {
-        this.contactIndex = i;
+        this.elementIndex = i;
         console.log(i);
+      },
+      msg: function() {
+        this.contacts[this.elementIndex]
       }
     }
 });
