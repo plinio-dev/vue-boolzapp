@@ -193,9 +193,10 @@ main {
 }
 .date_send {
   font-size: 10px;
-  white-space: nowrap;
+  /* white-space: nowrap;
   justify-content: flex-end;
-  align-self: flex-end;
+  align-self: flex-end; */
+  padding-left: 80%;
   color: #B1B1B1;
 }
 .send {
@@ -207,14 +208,13 @@ main {
   background-color: #D5F9BA;
   padding: 15px;
   border-radius: 5px;
-  display: flex;
   justify-content: space-between;
   margin: 10px 40px;
-  width: 35%;
+  min-width: 40%;
+  max-width: 50%;
   font-size: 14px;
 }
 .received {
-  display:flex;
   background-color: #ffffff;
 }
 
