@@ -33,9 +33,9 @@
         <div class="vl"></div>
         <div class="head-right">
           <div class="user-img">
-            <img class="circle " src="img/avatar_1.jpg" alt="">
+            <img class="circle " :src="'img/avatar' + contact[index].avatar + '.jpg'" alt="">
             <div class="info">
-              <h5>Nome Utente</h5>
+              <h5>{{contact.name}}</h5>
               <p>Ultimo accesso oggi alle </p>
             </div>
           </div>
@@ -61,7 +61,7 @@
           </div>
           <div class="contacts">
             <ul>
-              <li class="user" v-for="(contact, index) in contacts" @click="selectContact(index)">
+              <li class="user" v-for="(contact, index) in contacts" @click="selectContact(index)" :class="contactIndex == index ? 'active' : '' ">
                 <img class="circle circle-user" :src="'img/avatar' + contact.avatar + '.jpg'">
                 <div class="name">
                   <h5>{{contact.name}} {{index}}</h5>

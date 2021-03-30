@@ -159,6 +159,7 @@ main {
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid #dedede80;
+  cursor: pointer;
 }
 .name {
   padding-left: 10px;
@@ -225,5 +226,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
 }
-
+.active {
+  background-color: #009688;
+}
 /* main */
