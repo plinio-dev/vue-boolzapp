@@ -12,7 +12,6 @@ body {
   background: linear-gradient(to top, #dbdbd2 75%, #009688 74%);
 }
 .wrapper {
-
   height: 95%;
   width: 80%;
   position: absolute;
@@ -20,6 +19,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
+  box-shadow: 7px 7px 17px #80808082;;
 }
 #search {
   height: 30px;
@@ -207,24 +207,26 @@ main {
 .sent {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-.chat {
+  margin-left: auto;
   background-color: #D5F9BA;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   min-width: 40%;
   max-width: 50%;
   font-size: 14px;
   margin-top: 15px;
 }
-.cl-white {
-  background-color: #ffffff;
-}
+
 .received{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 40%;
+  max-width: 50%;
+  font-size: 14px;
+  margin-top: 15px;
 }
 .active {
   background-color: #009688;

@@ -22,6 +22,7 @@ var app = new Vue ({
             name: 'Michele',
             avatar: '_1',
             visible: true,
+            lastAccess: "16:34",
             messages:
             [
               {
@@ -44,6 +45,7 @@ var app = new Vue ({
           {
             name: 'Fabio',
             avatar: '_2',
+            lastAccess: "08:34",
             visible: true,
             messages:
             [
@@ -68,6 +70,7 @@ var app = new Vue ({
             name: 'Samuele',
             avatar: '_3',
             visible: true,
+            lastAccess: "12:52",
             messages:
             [
               {
@@ -91,6 +94,7 @@ var app = new Vue ({
             name: 'Luisa',
             avatar: '_4',
             visible: true,
+            lastAccess: "21:40",
             messages:
             [
               {
@@ -106,15 +110,32 @@ var app = new Vue ({
             ],
           },
         ],
-      elementIndex: 0
+      elementIndex: 0,
+      newText: "",
     },
     methods: {
       selectContact: function(i) {
         this.elementIndex = i;
-        console.log(i);
       },
-      msg: function() {
-        this.contacts[this.elementIndex]
-      }
+      addMsg: function() {
+        this.contacts[this.elementIndex].messages.push(
+                {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    message: this.newText,
+                    status: "sent"
+                }
+            );
+            this.newText = "";
+
+            setTimeout(() => {
+              this.contacts[this.elementIndex].messages.push(
+                    {
+                        message: "ok",
+                        status: "received",
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss')
+                    }
+                );
+            }, 1000);
+      },
     }
 });
