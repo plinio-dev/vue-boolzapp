@@ -57,11 +57,11 @@
           </div>
           <div class="search">
             <button id="search"><i class="fas fa-search"></i></button>
-            <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+            <input type="text" name="" value="" v-model="searchQuery" placeholder="Cerca o inizia una nuova chat">
           </div>
           <div class="contacts">
             <ul>
-              <li class="user" v-for="(element, index) in contacts" @click="selectContact(index)" :class="elementIndex == index ? 'active' : '' ">
+              <li class="user" v-for="(element, index) in resultQuery"  @click="selectContact(index)" :class="elementIndex == index ? 'active' : '' ">
                 <img class="circle circle-user" :src="'img/avatar' + element.avatar + '.jpg'">
                 <div class="name">
                   <h5>{{element.name}}</h5>

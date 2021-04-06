@@ -10,6 +10,10 @@
 // ● Click sul contatto mostra la conversazione del contatto cliccato
 
 
+// Milestone 3
+// ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+// ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
 
 var app = new Vue ({
 
@@ -112,6 +116,7 @@ var app = new Vue ({
         ],
       elementIndex: 0,
       newText: "",
+      searchQuery: ""
     },
     methods: {
       selectContact: function(i) {
@@ -137,5 +142,16 @@ var app = new Vue ({
                 );
             }, 1000);
       },
+    },
+    computed: {
+      resultQuery(){
+        if(this.searchQuery){
+          return this.contacts.filter((element)=>{
+            return this.searchQuery.toLowerCase().split(' ').every(v => element.name.toLowerCase().includes(v))
+          })
+        }else{
+          return this.contacts;
+        }
+      }
     }
 });
